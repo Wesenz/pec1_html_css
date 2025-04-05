@@ -11,12 +11,12 @@
     "watcherGlob": "**"
   },
   "devDependencies": {
-    "parcel": "^2.9.3",
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
     "sass": "^1.86.2"
   },
   "main": "details.js",
   "dependencies": {
-    "@parcel/transformer-sass": "^2.14.4",
     "ansi-styles": "^4.3.0",
     "argparse": "^2.0.1",
     "balanced-match": "^1.0.2",
