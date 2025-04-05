@@ -16,7 +16,7 @@
   },
   "main": "details.js",
   "dependencies": {
-    "parcel/transformer-sass": "^2.14.4",
+    "@parcel/transformer-sass": "^2.14.4",
     "ansi-styles": "^4.3.0",
     "argparse": "^2.0.1",
     "balanced-match": "^1.0.2",
