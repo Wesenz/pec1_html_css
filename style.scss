@@ -26,22 +26,32 @@ $font-body: 'Open Sans', sans-serif;
   background-color: $primary-color;
   margin-bottom: 3vh;
   @include box-border;
+    transition: all 0.1s ease-in-out;
   &:hover {
-        background-color: $primary-color;
+     
         border-top: 1px solid $border-light;
         border-left: 2px solid $border-light;
         border-right: 2px solid $border-light;
         border-bottom: 2px solid $border-light;
+        transform: scale(1.02);
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
     img { 
         border-color: $border-light;
-       
+        clip-path: inset(7% 5% 5% 5% round 5px);
     }
     a { 
         background-color: $border-light;
+        border-radius: 5px;
         color: $border-dark;
+        width: fit-content;
+        padding: 5px;
     }
     h3 { 
-        color: $border-light; 
+        background-color: $border-light;
+        color: $border-dark;
+        border-radius: 5px;
+        padding: 5px;
     }
   }
 
@@ -53,7 +63,6 @@ $font-body: 'Open Sans', sans-serif;
     height: 22.2vh;
     border: 1px solid $border-dark;
     border-bottom: 2px solid $border-dark;
-    
   }
 
   h3 {
@@ -172,9 +181,8 @@ h4 {
     border-left: 1px solid black;
     border-right: 4px solid black;
     border-bottom: 3px solid black;
-    
 }
-
+    
 .title-container {
     display: grid;
     font-family: cursive;
@@ -436,6 +444,7 @@ iframe {
             height: auto;
             border: 1px solid $border-dark;
             border-bottom: 2px solid $border-dark;
+            clip-path: inset(7% 5% 5% 5% round 5px);
         }
         
         a {
@@ -443,6 +452,8 @@ iframe {
             text-align: center;
             width: 100%;
             margin-top: 2vh;
+            padding: 5px;
+            border-radius: 5px;
         }
 
         h3 {
@@ -450,6 +461,8 @@ iframe {
             grid-column: 1;
             text-align: center;
             padding-bottom: 1vh;
+            border-radius: 5px;
+            padding: 5px;
         }
 
         &:focus {
@@ -676,7 +689,7 @@ iframe {
         margin-bottom: 3vh;
         @include box-border;
 
-        a img {
+        img {
             grid-row: 1;
             grid-column: 1;
             width: 100%;
@@ -684,7 +697,7 @@ iframe {
             border: 1px solid $border-dark;
             border-bottom: 2px solid $border-dark;
         }
-        
+    
         a {
             grid-column: 1;
             text-align: center;
@@ -707,15 +720,20 @@ iframe {
 
             img { 
                 border-color: $border-light;
+                clip-path: inset(7% 5% 5% 5% round 5px);
+
             }
             a { 
                 background-color: $border-light;
                 color: $border-dark;
                 padding-right: 1vw;
                 padding-left: 1vw;
+                border-radius: 5px;
             }
             h3 { 
-                color: $border-light; 
+                color: $border-light;
+                padding: 5px;
+                border-radius: 5px;
             }
         }
     }
@@ -863,6 +881,7 @@ iframe {
     border-right: 5px solid white;
     border-bottom: 3px solid white;
     border-radius: 3px;
+    transform: scale(1.02);
 }
 
 input:hover {
@@ -876,6 +895,7 @@ input:hover {
     border-left: 1px solid white;
     border-right: 1px solid white;
     border-bottom: 3px solid white;
+    transform: scale(1.02);
 }
 
 input:focus {

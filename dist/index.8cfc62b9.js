@@ -597,15 +597,59 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"6rimH":[function(require,module,exports,__globalThis) {
 var _recipesJs = require("./recipes.js");
+function getResponsiveImageHTML(recipe, category) {
+    const fileNameNoExt = recipe.imageName;
+    const basePath = 'images-optim';
+    switch(category){
+        case 'asian':
+            return `
+                <img 
+                    src="${basePath}/asian/${fileNameNoExt}-800.webp"
+                    srcset="${basePath}/asian/${fileNameNoExt}-400.webp 400w,
+                            ${basePath}/asian/${fileNameNoExt}-800.webp 800w"
+                    sizes="(max-width: 600px) 100vw, 50vw"
+                    alt="${recipe.name}" />
+            `;
+        case 'spanish':
+            return `
+                <picture>
+                    <source srcset="${basePath}/spanish/${fileNameNoExt}.webp" type="image/webp">
+                    <img src="${basePath}/spanish/${fileNameNoExt}.jpg" alt="${recipe.name}" />
+                </picture>
+            `;
+        case 'italian':
+            return `
+                <img src="${basePath}/italian/${fileNameNoExt}.jpg" alt="${recipe.name}"" />
+            `;
+        case 'french':
+            return `
+                <picture>
+                    <source media="(min-width: 800px)" srcset="${basePath}/french/${fileNameNoExt}-large.jpg">
+                    <img src="${basePath}/french/${fileNameNoExt}-small.jpg" alt="${recipe.name}" />
+                </picture>
+            `;
+        case 'english':
+            return `
+                <picture>
+                    <source srcset="${basePath}/english/${fileNameNoExt}.avif" type="image/avif">
+                    <img src="${basePath}/english/${fileNameNoExt}.jpg" alt="${recipe.name}" />
+                </picture>
+            `;
+        default:
+            return `<img src="${basePath}/${fileNameNoExt}.jpg" alt="${recipe.name}" />`;
+    }
+}
 function populateRecipeContainer(recipes, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = '';
+    const category = containerId.split('-')[0]; // 'asian' de 'asian-container'
     recipes.forEach((recipe)=>{
         const childContainer = document.createElement('div');
         childContainer.className = 'child-container';
+        const responsiveImg = getResponsiveImageHTML(recipe, category);
         childContainer.innerHTML = `
             <a href="details.html?recipe=${encodeURIComponent(recipe.name)}">
-                <img src="${recipe.image}" alt="${recipe.name}"/>
+                ${responsiveImg}
             </a>
             <a href="details.html?recipe=${encodeURIComponent(recipe.name)}">${recipe.name}</a>
             <h3>${recipe.country}</h3>
@@ -613,7 +657,6 @@ function populateRecipeContainer(recipes, containerId) {
         container.appendChild(childContainer);
     });
 }
-// LISTENERS 
 document.addEventListener('DOMContentLoaded', ()=>{
     populateRecipeContainer((0, _recipesJs.asianRecipes), 'asian-container');
     populateRecipeContainer((0, _recipesJs.spanishRecipes), 'spanish-container');

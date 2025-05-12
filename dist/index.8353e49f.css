@@ -4,26 +4,36 @@
   border-top-width: 1px;
   justify-items: center;
   margin-bottom: 3vh;
+  transition: all .1s ease-in-out;
   display: grid;
 }
 
 .child-container:hover {
-  background-color: #424242;
+  cursor: pointer;
   border: 2px solid #fff;
   border-top-width: 1px;
+  transition: all .1s ease-in-out;
+  transform: scale(1.02);
 }
 
 .child-container:hover img {
+  clip-path: inset(7% 5% 5% round 5px);
   border-color: #fff;
 }
 
 .child-container:hover a {
   color: #000c;
   background-color: #fff;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px;
 }
 
 .child-container:hover h3 {
-  color: #fff;
+  color: #000c;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .child-container img {
@@ -363,6 +373,7 @@ iframe {
   }
 
   .child-container a img {
+    clip-path: inset(7% 5% 5% round 5px);
     border: 1px solid #000c;
     border-bottom-width: 2px;
     grid-area: 1 / 1;
@@ -372,15 +383,18 @@ iframe {
 
   .child-container a {
     text-align: center;
+    border-radius: 5px;
     grid-column: 1;
     width: 100%;
     margin-top: 2vh;
+    padding: 5px;
   }
 
   .child-container h3 {
     text-align: center;
+    border-radius: 5px;
     grid-area: 3 / 1;
-    padding-bottom: 1vh;
+    padding: 5px;
   }
 
   .child-container:focus {
@@ -583,7 +597,7 @@ iframe {
     display: grid;
   }
 
-  .child-container a img {
+  .child-container img {
     border: 1px solid #000c;
     border-bottom-width: 2px;
     grid-area: 1 / 1;
@@ -610,18 +624,22 @@ iframe {
   }
 
   .child-container:focus img {
+    clip-path: inset(7% 5% 5% round 5px);
     border-color: #fff;
   }
 
   .child-container:focus a {
     color: #000c;
     background-color: #fff;
+    border-radius: 5px;
     padding-left: 1vw;
     padding-right: 1vw;
   }
 
   .child-container:focus h3 {
     color: #fff;
+    border-radius: 5px;
+    padding: 5px;
   }
 
   .title-container {
@@ -743,6 +761,7 @@ iframe {
   border-width: 1px 5px 3px 1px;
   border-radius: 3px;
   padding: 10px 55px;
+  transform: scale(1.02);
 }
 
 input:hover {
@@ -753,6 +772,7 @@ input:hover {
   width: 50vw;
   height: 4vh;
   margin-bottom: 2vh;
+  transform: scale(1.02);
 }
 
 input:focus {

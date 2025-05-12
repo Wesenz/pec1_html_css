@@ -1,10 +1,10 @@
-import { images } from './images.js';
-
 export const asianRecipes = [
     {
         name: "Sushi",
         country: "Japan",
-        image: images.sushi,
+        category: "Asian",
+        ext: "sushi.png",
+        imageName: "sushi",	
         video: "https://www.youtube.com/embed/Fjdyw8Cvxbs?si=kWJZIDZySZQj8HJS",
         info: {
             prepTime: "35 minutos",
@@ -34,7 +34,8 @@ export const asianRecipes = [
     {
         name: "Pad Thai",
         country: "Thailand",
-        image: images.padthai,
+        category: "Asian",
+        imageName: "padthai",
         video: "https://www.youtube.com/embed/xWDwcDTQxs8?si=ilIeJfgwEPLncZPT",
         info: {
             prepTime: "20 minutos",
@@ -66,7 +67,8 @@ export const asianRecipes = [
     {
         name: "Kung Pao Chicken",
         country: "China",
-        image: images.kungpao,
+        category: "Asian",
+        imageName: "kungpao",
         video: "https://www.youtube.com/embed/50VmOv5frIc?si=yJNVlX-KC5aMjQgR",
         info: {
             prepTime: "25 minutos",
@@ -98,7 +100,8 @@ export const asianRecipes = [
     {
         name: "Bibimbap",
         country: "Korea",
-        image: images.bibimbap,
+        category: "Asian",
+        imageName: "bibimbap",
         video: "https://www.youtube.com/embed/9kEm2B9_HBI?si=FfyiHvTCGYeQc8Xl",
         info: {
             prepTime: "30 minutos",
@@ -130,7 +133,8 @@ export const asianRecipes = [
     {
         name: "Pho",
         country: "Vietnam",
-        image: images.pho,
+        category: "Asian",
+        imageName: "pho",
         video: "https://www.youtube.com/embed/lpu9y9L5g4Q?si=GmLQRB2H5bCix9X2",
         info: {
             prepTime: "30 minutos",
@@ -165,7 +169,8 @@ export const spanishRecipes = [
     {
         name: "Paella",
         country: "Spain",
-        image: images.paella,
+        category: "Spanish",
+        imageName: "paella",
         video: "https://www.youtube.com/embed/vWySIREExjo?si=imJJ7DcNYj1cusvH",
         info: {
             prepTime: "30 minutos",
@@ -197,7 +202,8 @@ export const spanishRecipes = [
     {
         name: "Gazpacho",
         country: "Spain",
-        image: images.gazpacho,
+        category: "Spanish",
+        imageName: "gazpacho",
         video: "https://www.youtube.com/embed/2XlvI-aNcsU?si=cnYWZpeqkS_JBxNd",
         info: {
             prepTime: "15 minutos",
@@ -229,7 +235,8 @@ export const spanishRecipes = [
     {
         name: "Croquetas",
         country: "Spain",
-        image: images.croquetas,
+        category: "Spanish",
+        imageName: "croquetas",
         video: "https://www.youtube.com/embed/Bv3bPIJw8mc?si=Y5mRpeBH2p2FnzTW",
         info: {
             prepTime: "45 minutos",
@@ -261,7 +268,8 @@ export const spanishRecipes = [
     {
         name: "Fabada Asturiana",
         country: "Spain",
-        image: images.fabada,
+        category: "Spanish",
+        imageName: "fabadaasturiana",
         video: "https://www.youtube.com/embed/NvhuoE8ENGQ?si=lZr3nvtUWuxyqNR-",
         info: {
             prepTime: "12 horas remojo",
@@ -293,7 +301,8 @@ export const spanishRecipes = [
     {
         name: "Pulpo a la Gallega",
         country: "Spain",
-        image: images.pulpo,
+        category: "Spanish",
+        imageName: "pulpogallega",
         video: "https://www.youtube.com/embed/ZmwiwuJNtUM?si=omYOanj5XsfMgYsn",
         info: {
             prepTime: "15 minutos",
@@ -328,7 +337,8 @@ export const italianRecipes = [
     {
         name: "Espagueti Carbonara",
         country: "Italy",
-        image: images.carbonara,
+        category: "Italian",
+        imageName: "espagueticarbonara",
         video: "https://www.youtube.com/embed/6Oy5ITdDQ3o",
         info: {
             prepTime: "15 minutos",
@@ -359,7 +369,8 @@ export const italianRecipes = [
     {
         name: "Pizza Margherita",
         country: "Italy",
-        image: images.pizza,
+        category: "italian",
+        imageName: "pizzamargherita",
         video: "https://www.youtube.com/embed/lDCxRKtRwXw?si=LNrEJaD2TxbOTafn",
         info: {
             prepTime: "2 horas",
@@ -391,7 +402,8 @@ export const italianRecipes = [
     {
         name: "Risotto ai Funghi",
         country: "Italy",
-        image: images.risotto,
+        category: "Italian",
+        imageName: "risotto",
         video: "https://www.youtube.com/embed/VOBLOLQx0jE",
         info: {
             prepTime: "15 minutos",
@@ -423,7 +435,8 @@ export const italianRecipes = [
     {
         name: "Lasagna alla Bolognese",
         country: "Italy",
-        image: images.lasagna,
+        category: "Italian",
+        imageName: "lasagna",
         video: "https://www.youtube.com/watch?v=s_FLKOlGQ4c",
         info: {
             prepTime: "45 minutos",
@@ -455,7 +468,8 @@ export const italianRecipes = [
     {
         name: "Tiramisú",
         country: "Italy",
-        image: images.tiramisu,
+        category: "Italian",
+        imageName: "tiramisu",
         video: "https://www.youtube.com/watch?v=Z2ql_eRRAtQ",
         info: {
             prepTime: "30 minutos",
@@ -490,7 +504,8 @@ export const frenchRecipes = [
     {
         name: "Coq au Vin",
         country: "France",
-        image: images.coqauvin,
+        category: "French",	
+        imageName: "coqauvin",
         video: "https://www.youtube.com/embed/2QuVUjCyWbU",
         info: {
             prepTime: "30 minutos",
@@ -522,7 +537,8 @@ export const frenchRecipes = [
     {
         name: "Ratatouille",
         country: "France",
-        image: images.ratatouille,
+        category: "French",
+        imageName: "ratatouille",
         video: "https://www.youtube.com/embed/BQiQoAQdZCc",
         info: {
             prepTime: "30 minutos",
@@ -554,7 +570,8 @@ export const frenchRecipes = [
     {
         name: "Crème Brûlée",
         country: "France",
-        image: images.cremebrulee,
+        category: "French",
+        imageName: "cremebrulee",
         video: "https://www.youtube.com/watch?v=jqDAwUhEosY",
         info: {
             prepTime: "20 minutos",
@@ -586,7 +603,8 @@ export const frenchRecipes = [
     {
         name: "Quiche Lorraine",
         country: "France",
-        image: images.quiche,
+        category: "French",
+        imageName: "quiche",
         video: "https://www.youtube.com/watch?v=h6gD-UkrQSU",
         info: {
             prepTime: "25 minutos",
@@ -618,7 +636,7 @@ export const frenchRecipes = [
     {
         name: "Soupe à l'Oignon",
         country: "France",
-        image: images.onionsoup,
+        imageName: "soupeoignon",
         video: "https://www.youtube.com/watch?v=Yre4UzPFZpw",
         info: {
             prepTime: "20 minutos",
@@ -653,7 +671,8 @@ export const englishRecipes = [
     {
         name: "Fish and Chips",
         country: "England",
-        image: images.fishandchips,
+        category: "English",
+        imageName: "fishandchips",
         video: "https://www.youtube.com/watch?v=CSBvpy16wvg",
         info: {
             prepTime: "20 minutos",
@@ -685,7 +704,8 @@ export const englishRecipes = [
     {
         name: "Shepherd's Pie",
         country: "England",
-        image: images.shepherdspie,
+        category: "English",
+        imageName: "shepherdspie",
         video: "https://www.youtube.com/watch?v=a3EYQARJkLk",
         info: {
             prepTime: "30 minutos",
@@ -717,7 +737,8 @@ export const englishRecipes = [
     {
         name: "English Breakfast",
         country: "England",
-        image: images.englishbreakfast,
+        category: "English",
+        imageName: "englishbreakfast",
         video: "https://www.youtube.com/watch?v=N0qIuwdLQbA",
         info: {
             prepTime: "15 minutos",
@@ -749,7 +770,8 @@ export const englishRecipes = [
     {
         name: "Apple Crumble",
         country: "England",
-        image: images.applecrumble,
+        category: "English",
+        imageName: "applecrumble",
         video: "https://www.youtube.com/watch?v=GSbg1w_heTw",
         info: {
             prepTime: "20 minutos",
@@ -781,7 +803,8 @@ export const englishRecipes = [
     {
         name: "Sunday Roast",
         country: "England",
-        image: images.sundayroast,
+        category: "English",
+        imageName: "sundayroast",
         video: "https://www.youtube.com/watch?v=NUn2yAyKUhg",
         info: {
             prepTime: "30 minutos",

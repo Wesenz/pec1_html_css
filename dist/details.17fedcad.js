@@ -619,8 +619,13 @@ function populateDetailsPage() {
     }
     // Update image
     const imgElement = document.querySelector('.details-img-container img');
-    imgElement.src = recipe.image;
-    imgElement.alt = recipe.name;
+    // Usar la misma estructura que en script.js
+    const basePath = 'images-optim';
+    const category = recipe.category.toLowerCase();
+    // Usar getResponsiveImageHTML para mantener consistencia
+    const imageHTML = getResponsiveImageHTML(recipe, category);
+    const imgContainer = document.querySelector('.details-img-container');
+    imgContainer.innerHTML = imageHTML;
     // Update title
     const titleElement = document.querySelector('.details-title-container h2');
     titleElement.textContent = recipe.name;
@@ -658,6 +663,49 @@ function populateDetailsPage() {
                 </iframe>
             `;
         }
+    }
+}
+// Reutilizar la función de script.js
+function getResponsiveImageHTML(recipe, category) {
+    const fileNameNoExt = recipe.imageName;
+    const basePath = 'images-optim';
+    switch(category){
+        case 'asian':
+            return `
+                <img 
+                    src="${basePath}/asian/${fileNameNoExt}-800.webp"
+                    srcset="${basePath}/asian/${fileNameNoExt}-400.webp 400w,
+                            ${basePath}/asian/${fileNameNoExt}-800.webp 800w"
+                    sizes="(max-width: 600px) 100vw, 50vw"
+                    alt="${recipe.name}" />
+            `;
+        case 'spanish':
+            return `
+                <picture>
+                    <source srcset="${basePath}/spanish/${fileNameNoExt}.webp" type="image/webp">
+                    <img src="${basePath}/spanish/${fileNameNoExt}.jpg" alt="${recipe.name}" />
+                </picture>
+            `;
+        case 'italian':
+            return `
+                <img src="${basePath}/italian/${fileNameNoExt}.jpg" alt="${recipe.name}"" />
+            `;
+        case 'french':
+            return `
+                <picture>
+                    <source media="(min-width: 800px)" srcset="${basePath}/french/${fileNameNoExt}-large.jpg">
+                    <img src="${basePath}/french/${fileNameNoExt}-small.jpg" alt="${recipe.name}" />
+                </picture>
+            `;
+        case 'english':
+            return `
+                <picture>
+                    <source srcset="${basePath}/english/${fileNameNoExt}.avif" type="image/avif">
+                    <img src="${basePath}/english/${fileNameNoExt}.jpg" alt="${recipe.name}" />
+                </picture>
+            `;
+        default:
+            return `<img src="${basePath}/${fileNameNoExt}.jpg" alt="${recipe.name}" />`;
     }
 }
 document.addEventListener('DOMContentLoaded', populateDetailsPage);

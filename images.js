@@ -1,5 +1,6 @@
+/*
 // Asian recipes images
-import sushi from './static/img/sushi.png';
+import sushi from './images-optim/asian/sushi-400.webp';
 import padthai from './static/img/padthai.png';
 import kungpao from './static/img/kungpao.png';
 import bibimbap from './static/img/bibimbap.png';
@@ -69,3 +70,5 @@ export const images = {
     applecrumble,
     sundayroast
 };
+
+*/
